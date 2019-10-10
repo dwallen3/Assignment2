@@ -11,25 +11,31 @@ package cse360assign2;
 public class AddingMachine {
 	
 	private int total;
+	private String returnStr = "0"; // string that gets returned
 	
 	public AddingMachine () { // the object to add all the operations
-		total = 0;  // not needed - included for clarity
+	
 	}
 	
 	public int getTotal () { // returns the number stored in the total
-		return 0;
+		return total;
 	}
 	
 	public void add (int value) { // adds to total
+		total += value;
+		returnStr += " + " + value;
 		
 	}
 	
 	public void subtract (int value) { // subtracts from total
+		total += value;
+		returnStr += " - " + value;
 		
 	}
 	
 	public String toString () { // returns string of all the math operations
-		return "";
+		return returnStr;
+		
 	}
 	
 	public void clear() { // clears string
